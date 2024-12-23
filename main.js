@@ -65,7 +65,7 @@ app.use(express.json());
 app.use(express.static("public"))
 
 app.get("/apis/", async (req, res) => {
-  res.status(500).json({ error: "server error" });
+  res.status(200).json({ success: "server error" });
 });
 app.post("/api/users/telegram/info", async (req, res) => {
   try {
